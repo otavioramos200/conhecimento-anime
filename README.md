@@ -1,13 +1,15 @@
 # conhecimento-anime
 <!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 </head>
 <body>
-
+<h1>Meu blog tech</h1>
+<p>Vou compartilhar conhecimentos sobre anime e manga </p>
 </body>
 </html>
