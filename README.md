@@ -16,5 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h2>Meu primeiro post</h2>
   <p>Por:Otávio ramos</p>
+  main {
+background-color: #FFFFFF;
+color: #183C63;
+}
 
 
