@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Interativo - Start Alura</title>
+    <title>Otávio | Meu Rascunho Gamer</title>
+  
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <section class="card" aria-labelledby="titulo-contador">
-            <!-- Título Acessível -->
-            <h1 id="titulo-contador">Painel de Engajamento</h1>
-            <p class="descricao">Clique nos botões abaixo para interagir. Ao atingir metas, novas mensagens serão desbloqueadas!</p>
+    <main class="game-container">
+       
+        <section class="game-card" aria-labelledby="game-title">
             
-            <!-- Imagem de Gamer (Link direto e funcional adicionado) -->
-            <div class="gamer-imagem-container">
-                <img src="https://unsplash.com" alt="Pessoa jogando videogame em um ambiente gamer com luzes azuis e neon" class="gamer-img">
+            
+ <header class="game-header">
+<h1 id="game-title">Otávio Arcade 🕹️</h1>
+ <p class="game-subtitle">Clique nos botões abaixo para farmar XP!</p>
+ </header>
+ <div class="avatar-container">
+    <img src="https://unsplash.com" alt="Setup gamer com luzes azuis e neon" class="avatar-img">
+  </div>
+  <article class="scoreboard">
+<span class="score-label">XP TOTAL:</span>
+ <div id="numero-contador" class="score-number" aria-live="polite">0</div>
+  <p id="mensagem-alerta" class="achievement-msg" role="status" aria-atomic="true"></p>
+    </article>
+
+          
+            <div class="control-group">
+                <button id="btn-subtrair" class="btn btn-damage" aria-label="Diminuir XP">-1 XP</button>
+                <button id="btn-adicionar" class="btn btn-action" aria-label="Aumentar XP">+1 XP</button>
             </div>
 
-            <!-- Área do Contador -->
-            <article class="contador-box">
-                <span class="label">Total de Interações</span>
-                <!-- aria-live atualiza leitores de tela automaticamente quando o número muda -->
-                <div id="numero-contador" class="numero" aria-live="polite">0</div>
-                <p id="mensagem-alerta" class="mensagem" role="status" aria-atomic="true"></p>
-            </article>
-
-            <!-- Controles com Flexbox -->
-            <div class="botoes-grupo">
-                <button id="btn-subtrair" class="btn btn-secundario" aria-label="Diminuir uma interação">-1</button>
-                <button id="btn-adicionar" class="btn btn-primario" aria-label="Aumentar uma interação">+1</button>
-            </div>
-
-            <!-- Botão de Reset -->
-            <button id="btn-reset" class="btn-reset" aria-label="Zerar o contador">Zerar Painel</button>
-        </section>
+            <footer class="game-footer">
+                <button id="btn-reset" class="btn-reset" aria-label="Zerar o jogo">[ recomeçar do zero ]</button>
+            </footer>
+</section>
     </main>
     <script src="script.js"></script>
 </body>
