@@ -3,255 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Otávio | Meu Canto Gamer</title>
-    <style>
-        /* --- ESTILOS E PALETA DE CORES (CSS) --- */
-        :root {
-            --cor-fundo: #050b14;       /* Azul escuro profundo pedido na identidade */
-            --cor-bloco: #0b1626;       /* Azul intermediário para caixas */
-            --cor-principal: #00d2ff;   /* Azul neon vibrante para links/títulos */
-            --cor-texto: #b4c6ef;       /* Azul claro suave para excelente leitura */
-            --cor-branca: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--cor-fundo);
-            color: var(--cor-branca);
-            line-height: 1.6;
-        }
-
-        /* Menu de Navegação Superior (Padrão Alura) */
-        .cabecalho {
-            background-color: #03070d;
-            border-bottom: 2px solid var(--cor-principal);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .cabecalho__navegacao {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 1.2rem 2rem;
-        }
-
-        .cabecalho__logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--cor-principal);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .cabecalho__menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .cabecalho__menu__link {
-            color: var(--cor-branca);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .cabecalho__menu__link:hover {
-            color: var(--cor-principal);
-        }
-
-        /* Conteúdo Principal Flexbox/Grid */
-        .conteudo {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Seção de Apresentação (Hero Section) */
-        .apresentacao {
-            margin-bottom: 4rem;
-        }
-
-        .apresentacao__etiqueta {
-            background-color: rgba(0, 210, 255, 0.15);
-            color: var(--cor-principal);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
-
-        .apresentacao__titulo {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .apresentacao__titulo em {
-            color: var(--cor-principal);
-            font-style: normal;
-        }
-
-        .apresentacao__texto {
-            font-size: 1.15rem;
-            color: var(--cor-texto);
-            max-width: 700px;
-        }
-
-        /* Estrutura de Artigo Humana e Limpa */
-        .publicacao {
-            background-color: var(--cor-bloco);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #162a45;
-            max-width: 800px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .publicacao:hover {
-            transform: translateY(-5px);
-            border-color: var(--cor-principal);
-        }
-
-        .publicacao__imagem-container {
-            width: 100%;
-            height: 380px;
-            overflow: hidden;
-        }
-
-        .publicacao__imagem {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .publicacao:hover .publicacao__imagem {
-            transform: scale(1.05);
-        }
-
-        .publicacao__conteudo {
-            padding: 2.5rem;
-        }
-
-        .publicacao__autor {
-            font-size: 0.85rem;
-            color: var(--cor-principal);
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
-            letter-spacing: 1px;
-        }
-
-        .publicacao__titulo {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-            color: var(--cor-branca);
-        }
-
-        .publicacao__texto {
-            color: var(--cor-texto);
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Rodapé Semântico */
-        .rodape {
-            background-color: #03070d;
-            border-top: 1px solid #162a45;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            margin-top: 6rem;
-        }
-
-        .rodape__texto {
-            color: #536b8f;
-            font-size: 0.95rem;
-        }
-
-        .rodape__texto em {
-            color: var(--cor-principal);
-            font-style: normal;
-            font-weight: bold;
-        }
-
-        /* Responsividade para Dispositivos Móveis */
-        @media (max-width: 768px) {
-            .cabecalho__navegacao { flex-direction: column; gap: 1rem; padding: 1rem; }
-            .conteudo { padding: 2rem 1.5rem; }
-            .apresentacao__titulo { font-size: 2.2rem; }
-            .publicacao__imagem-container { height: 240px; }
-            .publicacao__conteudo { padding: 1.5rem; }
-            .publicacao__titulo { font-size: 1.7rem; }
-        }
-    </style>
+    <title>Contador Interativo - Start Alura</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- TAG SEMÂNTICA: HEADER -->
-    <header class="cabecalho">
-        <!-- TAG SEMÂNTICA: NAV -->
-        <nav class="cabecalho__navegacao">
-            <a href="#inicio" class="cabecalho__logo">🎮 OTÁVIO.GAME</a>
-            <ul class="cabecalho__menu">
-                <li><a href="#inicio" class="cabecalho__menu__link">Início</a></li>
-                <li><a href="#blog" class="cabecalho__menu__link">Primeiro Post</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- TAG SEMÂNTICA: MAIN -->
-    <main class="conteudo" id="inicio">
-        
-        <!-- TAG SEMÂNTICA: SECTION (Área de Apresentação) -->
-        <section class="apresentacao">
-            <span class="apresentacao__etiqueta">Espaço do Otávio</span>
-            <h1 class="apresentacao__titulo">Bem-vindo ao meu <em>universo gamer</em>.</h1>
-            <p class="apresentacao__texto">Aqui eu compartilho minhas experiências reais no mundo dos jogos. Sem roteiros prontos, apenas as minhas sinceras opiniões sobre as gameplays, os setups e tudo o que envolve essa paixão.</p>
-        </section>
-
-        <!-- TAG SEMÂNTICA: SECTION (Área do Feed) -->
-        <section class="feed" id="blog">
+    <main class="container">
+        <section class="card" aria-labelledby="titulo-contador">
+            <!-- Título Acessível -->
+            <h1 id="titulo-contador">Painel de Engajamento</h1>
+            <p class="descricao">Clique nos botões abaixo para interagir. Ao atingir metas, novas mensagens serão desbloqueadas!</p>
             
-            <!-- TAG SEMÂNTICA: ARTICLE (Indica um conteúdo independente) -->
-            <article class="publicacao">
-                <div class="publicacao__imagem-container">
-                    <!-- Imagem atualizada: Setup gamer moderno focado em periféricos com leds azuis -->
-                    <img src="https://unsplash.com" alt="Teclado mecânico gamer iluminado em azul sobre a mesa do setup" class="publicacao__imagem">
-                </div>
-                <div class="publicacao__conteudo">
-                    <div class="publicacao__autor">Escrito por Otávio</div>
-                    <h2 class="publicacao__titulo">Primeiro Post</h2>
-                    <p class="publicacao__texto">Estou dando o pontapé inicial no meu site oficial de jogos hospedado no GitHub Pages! Esse espaço foi construído sob medida para registrar minhas jornadas virtuais, os chefões mais difíceis que enfrentei e as análises das minhas maiores jogatinas. Fique por perto, porque esse é apenas o começo de muita história e gameplay que vem por aí.</p>
-                </div>
+            <!-- Imagem de Gamer (Link direto e funcional adicionado) -->
+            <div class="gamer-imagem-container">
+                <img src="https://unsplash.com" alt="Pessoa jogando videogame em um ambiente gamer com luzes azuis e neon" class="gamer-img">
+            </div>
+
+            <!-- Área do Contador -->
+            <article class="contador-box">
+                <span class="label">Total de Interações</span>
+                <!-- aria-live atualiza leitores de tela automaticamente quando o número muda -->
+                <div id="numero-contador" class="numero" aria-live="polite">0</div>
+                <p id="mensagem-alerta" class="mensagem" role="status" aria-atomic="true"></p>
             </article>
 
+            <!-- Controles com Flexbox -->
+            <div class="botoes-grupo">
+                <button id="btn-subtrair" class="btn btn-secundario" aria-label="Diminuir uma interação">-1</button>
+                <button id="btn-adicionar" class="btn btn-primario" aria-label="Aumentar uma interação">+1</button>
+            </div>
+
+            <!-- Botão de Reset -->
+            <button id="btn-reset" class="btn-reset" aria-label="Zerar o contador">Zerar Painel</button>
         </section>
-
     </main>
-
-    <!-- TAG SEMÂNTICA: FOOTER -->
-    <footer class="rodape">
-        <p class="rodape__texto">&copy; 2026 Blog do <em>Otávio</em>. Desenvolvido durante os estudos de Web Design e publicado no GitHub Pages.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
